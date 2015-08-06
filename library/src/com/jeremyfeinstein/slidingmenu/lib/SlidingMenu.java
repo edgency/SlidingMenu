@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.res.Resources;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;

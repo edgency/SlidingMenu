@@ -991,6 +991,13 @@ public class SlidingMenu extends RelativeLayout {
 		int rightPadding = insets.right;
 		int topPadding = insets.top;
 		int bottomPadding = insets.bottom;
+		if (Build.VERSION.SDK_INT >= 21) {
+			Resources resources = getContent().getResources();
+			int resourceId = resources.getIdentifier("navigation_bar_height", "dimen", "android");
+			if (resourceId > 0) {
+				bottomPadding += resources.getDimensionPixelSize(resourceId);
+			}
+		}
 		if (!mActionbarOverlay) {
 			Log.v(TAG, "setting padding!");
 			setPadding(leftPadding, topPadding, rightPadding, bottomPadding);
